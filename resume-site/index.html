@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head> 
+
+
+</head>
+
+<script>
+  fetch('https://sjov1ca2yk.execute-api.us-east-1.amazonaws.com/Prod/put')
+      .then(() => fetch('https://sjov1ca2yk.execute-api.us-east-1.amazonaws.com/Prod/get'))
+      .then(response => response.json())
+      .then((data) => {
+          document.getElementById('replaceme').innerText = data.count
+      })
+</script>
+
+
+
+<body>
+  <p> 
+
+   Visitors:
+    <span id="replaceme" />
+ </p>
+
+</body>
+
+
+</html>
+
+
+
