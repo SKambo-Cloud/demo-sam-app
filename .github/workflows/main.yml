@@ -13,6 +13,6 @@ jobs:
         with:
           go-version: ${{ env.GO_VERSION }}
       - name: test get-function
-        run: cd demo-sam-app/getfunction && go test -v ./ && cd ../../
+        run: cd demo-sam-app/get-function && go test -v ./ && cd ../../
       - name: test put-function
-        run: cd demo-sam-app/putfunction && go test -v ./ && cd ../../
+        run: cd demo-sam-app/put-function && go test -v ./ && cd ../../
