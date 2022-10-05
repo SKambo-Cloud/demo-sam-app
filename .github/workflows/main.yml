@@ -1,0 +1,18 @@
+name: main
+on: push
+env:
+  GO_VERSION: 1.19.1
+
+jobs: 
+  test-infra:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-go@v2.1.3
+        with:
+          go-version: ${{ env.GO_VERSION }}
+      - name: test get-function
+        run: cd demo-sam-app/getfunction && go test -v ./ && cd ../../
+      - name: test put-function
+        run: cd demo-sam-app/putfunction && go test -v ./ && cd ../../
