@@ -45,7 +45,7 @@ Resources:
   MyCertificate:
     Type: AWS::CertificateManager::Certificate
     Properties:
-      DomainName: satnamkambo.xyz # TODO: Don't hardcode me
+      DomainName: satnamkambo.xyz 
       ValidationMethod: DNS           
 
   MyDistributions:
